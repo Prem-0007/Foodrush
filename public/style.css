@@ -1,0 +1,26 @@
+:root{--bg:#f2f5f1;--card:#fff;--fg:#12201a;--muted:#566660;--line:#d3ddd6;--accent:#0a7360;--bad:#c2331f;--good:#1b7f4b}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1512;--card:#16201b;--fg:#e6efe9;--muted:#93a59c;--line:#2a3a32;--accent:#4fd1b0;--bad:#ff7b66;--good:#52d08a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;padding:0 16px 48px}
+.top{max-width:1000px;margin:0 auto;padding:16px 0;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+h1{margin:0;font-size:24px}h1 span{color:var(--accent)}h2{margin:0 0 10px;font-size:18px}
+main{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:760px){main{grid-template-columns:minmax(0,1fr)}}
+.box,.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px}
+.item{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.item small{color:var(--muted);display:block}
+.item .r{display:flex;align-items:center;gap:8px;white-space:nowrap}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:6px;padding:6px 12px;min-height:34px}
+button:disabled{opacity:.5;cursor:not-allowed}
+#pay,#authBtn{width:100%;background:var(--accent);border-color:var(--accent);color:#fff;margin-top:10px;font-weight:600}
+.link{border:0;background:none;color:var(--accent);text-decoration:underline;padding:6px 0}
+label{display:block;font-size:13px;color:var(--muted);margin-top:8px}
+input{width:100%;font:inherit;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.line{display:flex;justify-content:space-between;gap:8px;padding:3px 0}
+#msg{min-height:1.4em;margin:8px 0 0;color:var(--muted)}#msg.err{color:var(--bad)}
+#banner{max-width:1000px;margin:0 auto 14px;padding:10px 14px;border-radius:8px;background:var(--card);border:1px solid var(--good);color:var(--good)}
+#banner.warn{border-color:var(--bad);color:var(--bad)}
+.o{border-top:1px solid var(--line);padding:8px 0}.o:first-child{border-top:0}
+.tag{font-size:12px;padding:1px 8px;border-radius:99px;border:1px solid var(--line)}
+
+nav a{color:var(--accent);font-size:14px}

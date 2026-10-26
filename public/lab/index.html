@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FoodRush Systems Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/lab/lab.css">
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <div class="brand">Food<i>Rush</i> Systems Lab</div>
+  <nav class="nav" id="nav" aria-label="Sections"></nav>
+</div></div>
+
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <h1>One order. <span>Every system</span> it touches.</h1>
+      <p class="lede">FoodRush is a food delivery app on MERN with Stripe payments and an AI review analyzer. Each concept you listed is a small working simulation here, built around that app. Break things on purpose and watch what the system does.</p>
+      <div class="hero-cta"><button type="button" class="btn pri big" id="place">Place an order</button><span class="dim sm" id="count"></span></div>
+      <div class="pipe" id="pipe"></div>
+    </div>
+    <div class="ticket" aria-label="Request trace">
+      <div class="ticket-h"><span>ORDER #FR-20418</span><span>1× Chicken Dum Biryani · ₹649</span></div>
+      <div id="heroLog"></div>
+    </div>
+  </header>
+
+  <section class="connect" id="connect" hidden aria-labelledby="ch"></section>
+
+  <section class="index" aria-labelledby="ih">
+    <div class="index-h"><h2 id="ih">Everything on your list</h2><span class="dim sm">Tap a concept to jump to its simulation</span></div>
+    <div id="indexBody"></div>
+  </section>
+
+  <main id="sections"></main>
+
+  <footer>Simulation cards run in your browser and touch nothing. The “Run it on your real server” sections appear after you connect as admin, and they write only to scratch collections in your own database.</footer>
+</div>
+
+<script src="/lab/lab.js"></script>
+</body>
+</html>

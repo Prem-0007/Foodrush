@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FoodRush</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><h1>Food<span>Rush</span></h1><nav><a href="/lab/">Systems Lab</a></nav><div id="who"></div></header>
+<div id="banner" hidden></div>
+<main>
+  <section class="menu"><h2>Menu</h2><div id="menu" aria-live="polite">Loading menu…</div></section>
+  <aside>
+    <section class="box"><h2>Your order</h2>
+      <div id="cart"></div>
+      <label for="address">Delivery address</label>
+      <input id="address" autocomplete="street-address" maxlength="200" placeholder="Flat, street, area, city">
+      <button id="pay" type="button" disabled>Pay with Stripe</button>
+      <p id="msg" role="status"></p>
+    </section>
+    <section class="box" id="authbox"><h2 id="authTitle">Sign in</h2>
+      <form id="authForm">
+        <label for="name" id="nameLabel" hidden>Name</label><input id="name" autocomplete="name" hidden>
+        <label for="email">Email</label><input id="email" type="email" autocomplete="email" required>
+        <label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="8" required>
+        <button type="submit" id="authBtn">Sign in</button>
+      </form>
+      <button type="button" class="link" id="toggleAuth">Create an account</button>
+    </section>
+    <section class="box" id="ordersBox" hidden><h2>Your orders</h2><div id="orders"></div></section>
+  </aside>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
